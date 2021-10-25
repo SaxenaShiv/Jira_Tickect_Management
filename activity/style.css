@@ -1,0 +1,183 @@
+/* universal selector */
+/* user agent stylesheet -> browser styling */
+*{
+   box-sizing: border-box;
+}
+
+body{
+/* border:2px solid red; */
+margin:0px;
+font-family: sans-serif;
+}
+.header-container{
+/* border:1px solid black; */
+height:5.2rem;
+background-color:#333;
+display:flex;
+align-items: center;
+padding-left:3rem;
+}
+/* common styling */
+.header-container>*{
+   background-color:#454444;
+   height:65%;
+   border-radius: 6px;
+}
+.color-group_container{
+    /* relative unit which derived it's value from the parent */
+    width:40%;
+    margin-right:3rem;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+ }
+ .color{
+    height:50%;
+    width:12%;
+    border-radius:4px;
+ }
+.pink{
+   background-color:lightpink;
+}
+.blue{
+   background-color:lightblue; 
+}
+.green{
+   background-color:lightgreen;
+}
+.black{
+   background-color:black;
+}
+/* **********add cross */
+ .add-cross_container,.lock-unlock_container{
+  width:20%;
+  display:flex; 
+  margin-right:1rem
+}
+.add-cross_container>*,.lock-unlock_container>*{
+   width:50%;
+   height:100%;
+   /* background-color:red */
+}
+
+.plus-container,.multiply-container,.lock-container,.unlock-container{
+  /* perefectly center an element inside a div */
+   display: flex;
+   justify-content:center;
+   align-items: center; 
+   
+}
+.active{
+  background-color: rgb(62, 56, 56);
+}
+/* icons are treated as text  */
+.tool_icons{
+   font-size:2rem;
+   /* boldness */
+   font-weight:400;
+}
+
+/* input styling */
+.task_input{
+   color:white;
+}
+
+ /* ***********main container */
+.main-container{
+   /* border: 1px solid green; */
+   /*vh,vw*/
+   /* 100% width of the visible screen-> 100vw; */
+   /* 100% height of the visible screen-> 100vh; */
+   height: calc(100vh - 3.5rem); 
+   background-color: #f2f2f2;
+   padding:4rem;
+   display:flex;
+   justify-content:space-evenly;
+   /* align-items:center; */
+   flex-wrap: wrap;
+   gap: 1.2rem;
+   overflow-y: scroll;
+
+}
+.task_container{
+   /* border:1px solid black; */
+   background-color: white;
+   height: 8rem;
+   width:13rem;
+}
+.task_main-container{
+   padding:0.5rem;
+  height: 6.5rem;
+}
+.task_header{
+   height:0.5rem;
+   /* background-color: black; */
+}
+.task_id{
+   color:rgb(150, 144, 144);
+   /* left,right ,top bottom  */
+   margin:0.2rem;
+   margin-left:0px;
+}
+.text{
+   height: 80%;
+   overflow-y: scroll;
+}
+.text::-webkit-scrollbar {
+   display: none;
+ }
+
+/***************modal*****************************************/
+.modal{
+   height:20rem;
+   width:35rem;
+   background-color: white;
+   /* put it fixed*/
+   position: fixed;
+   /* center */
+   top:calc( 50% - 10rem);
+   left: calc( 50% - (35/2)rem);
+   display:flex;
+}
+.input_container{
+   width:65%;
+   /* border: 1px solid black; */
+   height:100%;
+   padding:2rem;
+   /* background-color: red; */
+
+}
+.input_container_text{
+   outline: none;
+   height:100%;
+   width:100%;
+   border:none;
+   font-size: 1.5rem;
+   /* font-weight: 100; */
+   font-family: sans-serif; 
+}
+.color_container{
+   background-color: #343131;
+   height:100%;
+   width:35%;
+}
+
+.color_container{
+   padding:  1.5rem;
+   /* text-align: center; */
+   display: flex;
+   /* flex direction -> flex for spacing */
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+}
+.color_picker{
+   height:3rem;
+   width:6rem;
+}
+.selected{
+   border: 0.2rem solid white;
+}
+@media only screen and (max-width: 600px) {
+        html { font-size: 10px; } 
+ }
